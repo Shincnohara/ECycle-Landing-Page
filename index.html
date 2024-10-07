@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" class="sm:scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-cycle Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
+    <link rel="stylesheet" href="src/output.css">
+    <style>
+      #mobile-menu::-webkit-scrollbar{
+        display: none;
+      }
+      #testi::-webkit-scrollbar{
+        display: none;
+      }
+    </style>
+    <script src="js/main.js" defer></script>
+    <link rel="shortcut icon" href="./favico.ico" type="image/x-icon">
+</head>
+<body class="bg-[#010B13] font-play">
+    <header class="bg-[#C7F177] sticky top-0 z-10 text-[#2C3D50]">
+        <section class="max-w-5xl mx-auto flex justify-between items-center p-4">
+
+            <!-- This is logo div -->
+
+            <div class="flex gap-2 items-center justify-center cursor-pointer">
+                <img src="img/logo.png" alt="logo" width="60" height="40" >
+                <h1 class="text-3xl font-medium uppercase font-kalam">E-Cycle</h1>
+            </div>
+
+            <!-- this is nav bar for greater than md screens -->
+
+            <div>
+                <button
+                  id="hamburger-button"
+                  class="relative h-8 w-8 cursor-pointer text-3xl md:hidden"
+                >
+                  <!-- &#9776; -->
+                  <div
+                    class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-[#2C3D50] transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-[#2C3D50] before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-[#2C3D50] after:transition-all after:duration-500 after:content-['']"
+                  ></div>
+                </button>
+                <nav class="hidden space-x-8 text-xl md:flex" aria-label="main">
+                  <a href="#hero-section" class="hover:opacity-90 after:content-[''] after:h-[3px] after:w-full after:bg-[#047a6b] after:block after:rounded-[40px] after:scale-x-0 after:transition-all after:duration-300 after:ease-in hover:after:scale-x-[1]">Home</a>
+
+                  <div href="#about" class="flex items-center relative cursor-pointer group transition-all" id="drop-down">
+                    <button class="after:content-[''] after:h-[3px] after:w-full after:bg-[#047a6b] after:block after:rounded-[40px] after:scale-x-0 after:transition-all after:duration-300 after:ease-in hover:after:scale-x-[1]"  id="lg-btn">
+                        About
+                    </button>
+                  
+                    <div class="absolute top-[35px] left-0 bg-[#c7f177] hidden z-10" id="dropdown">
+                      <a href="#features" class="block p-2 hover:bg-white">Features</a>
+                      <a href="#how-it-works" class="block p-2 hover:bg-white whitespace-nowrap">How it Works</a> 
+                    </div>
+                  </div>
+                
+                  <a href="#products" class="hover:opacity-90 after:content-[''] after:h-[3px] after:w-full after:bg-[#047a6b] after:block after:rounded-[40px] after:scale-x-0 after:transition-all after:duration-300 after:ease-in hover:after:scale-x-[1]">Products</a>
+
+                  <div class="flex items-center relative cursor-pointer group transition-all" id="drop-down">
+                    <button class="after:content-[''] after:h-[3px] after:w-full after:bg-[#047a6b] after:block after:rounded-[40px] after:scale-x-0 after:transition-all after:duration-300 after:ease-in hover:after:scale-x-[1]" id="lg-btn">
+                        Reviews
+                    </button>
+                  
+                    <div class="absolute top-[35px] left-0 bg-[#c7f177] hidden z-10" id="dropdown">
+                      <a href="#testimonials" class="block p-2 hover:bg-white">Testimonials</a>
+                      <a href="#gallery" class="block p-2 hover:bg-white whitespace-nowrap">Gallery</a>
+                    </div>
+                  </div>
+
+                  <a href="#contact" class="hover:opacity-90 after:content-[''] after:h-[3px] after:w-full after:bg-[#047a6b] after:block after:rounded-[40px] after:scale-x-0 after:transition-all after:duration-300 after:ease-in hover:after:scale-x-[1]">Contact</a>
+                </nav>
+              </div>
+        </section>
+
+        <!-- this section is mobile-nav bar -->
+
+        <section id="mobile-menu" class="h-screen w-0 fixed top-68 right-0 bg-[#111] overflow-scroll transition-all duration-500 ease-linear pt-[60px] md:hidden">
+            <a href="#hero-section" class="text-white text-center text-xl hover:bg-[#C7F177] hover:text-[#2C3D50] focus:bg-[#C7F177] focus:text-[#2C3D50] block p-6">Home</a>
+
+            <button class="text-white text-center text-xl hover:bg-[#C7F177] hover:text-[#2C3D50] focus:bg-[#C7F177] focus:text-[#2C3D50] p-6 flex justify-center items-center border-none mx-auto w-[250px] relative" id="btn">
+              <span>About
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#2c3d50" class="absolute right-1 top-4"><path d="M480-360 280-559.33h400L480-360Z"/></svg>
+              </span>
+              
+            </button>
+            <div class="hidden flex-col justify-center items-center bg-[#333]">
+              <a href="#features" class="text-white text-center text-xl hover:bg-[#C7F177] hover:text-[#2C3D50] focus:bg-[#C7F177] focus:text-[#2C3D50] block p-6 w-[250px]">Features</a>
+              <a href="#how-it-works" class="text-white text-center text-xl hover:bg-[#C7F177] hover:text-[#2C3D50] focus:bg-[#C7F177] focus:text-[#2C3D50] block p-6 w-[250px]">How It Works</a>  
+            </div>
+
+            <a href="#products" class="text-white text-center text-xl hover:bg-[#C7F177] hover:text-[#2C3D50] focus:bg-[#C7F177] focus:text-[#2C3D50] block p-6">Products</a>
+
+            <button class="text-white text-center text-xl hover:bg-[#C7F177] hover:text-[#2C3D50] focus:bg-[#C7F177] focus:text-[#2C3D50] p-6 flex justify-center items-center border-none mx-auto w-[250px] relative" id="btn">
+              <span>Reviews
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#2c3d50" class="absolute right-1 top-4"><path d="M480-360 280-559.33h400L480-360Z"/></svg>
+              </span>
+              
+            </button>
+            <div class="hidden flex-col justify-center items-center bg-[#333]">
+              <a href="#testimonials" class="text-white text-center text-xl hover:bg-[#C7F177] hover:text-[#2C3D50] focus:bg-[#C7F177] focus:text-[#2C3D50] block p-6 w-[250px]">Testimonials</a>
+              <a href="#gallery" class="text-white text-center text-xl hover:bg-[#C7F177] hover:text-[#2C3D50] focus:bg-[#C7F177] focus:text-[#2C3D50] block p-6 w-[250px]">Gallery</a>
+            </div>
+
+            <a href="#contact" class="text-white text-center text-xl hover:bg-[#C7F177] hover:text-[#2C3D50] focus:bg-[#C7F177] focus:text-[#2C3D50] block p-6">Contact</a>
+        </section>
+    </header>
+    <main class="mx-auto max-w-5xl">
+
+      <!-- This is Hero section -->
+
+      <section id="hero-section" class="widescreen:section-min-height tallscreen:section-min-height flex flex-col-reverse justify-center items-center gap-4 p-6 sm:flex-row scroll-mt-[68px] mb-14">
+        <article class="sm:w-1/2">
+          <h2 class="max-w-md text-center text-3xl font-bold text-white sm:text-left sm:text-4xl">
+            Power Your Ride,
+            <span class="text-[#C7F177]">
+              Embrace the Future
+            </span>
+          </h2>
+          <p class="max-w-md text-center text-lg text-white sm:text-left mt-2">
+            Experience the future of urban commuting.  With our lightweight high-performance electric bike, you'll tackle hills, long distances, and daily commutes with ease.  Environmentally friendly and packed with smart features, it's time to upgrade your ride.
+          </p>
+        </article>
+        <img src="img/hero.png" alt="E-Cylce" class="w-1/2">
+      </section>
+
+      <!-- This is features section -->
+
+      <section id="features" class="widescreen:section-min-height tallscreen:section-min-height scroll-mt-[68px] p-6 flex flex-col gap-8">
+        <h2 class="text-center text-3xl font-bold text-white sm:text-4xl mx-auto">
+          Innovative Features for Ultimate Ride
+        </h2>
+        <div class="flex flex-col items-center gap-12 justify-center sm:flex-row sm:flex-wrap sm:items-stretch">
+          <div class="w-[300px] bg-[#C7F177] flex flex-col p-4 rounded-2xl gap-4 shadow-lg shadow-slate-500">
+            <img src="img/Motor.png" alt="motor" class="text-center mx-auto" width="100" height="100">
+            <h3 class="text-2xl text-center font-bold">Effortless Power for Any Terrain</h3>
+            <p class="text-justify">
+              Our high-torque motor ensures smooth acceleration and easy climbs, no matter where your journey takes you.  Conquer hills and long distances with confidence, all while enjoying a quiet, seamless ride.
+            </p>
+          </div>
+          <div class="w-[300px] bg-[#C7F177] flex flex-col p-4 rounded-2xl gap-4 shadow-lg shadow-slate-500">
+            <img src="img/Battery.png" alt="battery" class="text-center mx-auto" width="100" height="100">
+            <h3 class="text-2xl text-center font-bold">Ride Farther on a Single Charge</h3>
+            <p class="text-justify">
+              Go the distance with a battery that lasts up to 50 miles on a single charge.  Whether you're commuting to work or exploring the countryside,  you'll have the range to get there and back with plenty of power to spare.
+            </p>
+          </div>
+          <div class="w-[300px] bg-[#C7F177] flex flex-col p-4 rounded-2xl gap-4 shadow-lg shadow-slate-500">
+            <img src="img/Frame.png" alt="frame" class="text-center mx-auto" width="100" height="100">
+            <h3 class="text-2xl text-center font-bold">A Strong Frame that's Easy to Handle</h3>
+            <p class="text-justify">
+              Built with a lightweight yet durable aluminium frame, our electric bike is designed for both strength and agility. it's easy to lift, maneuver, and store, without sacrificing durability or safety.
+            </p>
+          </div>
+          <div class="w-[300px] bg-[#C7F177] flex flex-col p-4 rounded-2xl gap-4 shadow-lg shadow-slate-500">
+            <img src="img/display.png" alt="display" class="text-center mx-auto" width="100" height="100">
+            <h3 class="text-2xl text-center font-bold">Track Your Ride at a Glance</h3>
+            <p class="text-justify">
+              Stay informed while you ride with our smart display.  Monitor your speed, distance, battery life, and more-all in real-time.  It's sleek, easy to read, and keeps you in control of your journey.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- This is how it works section -->
+
+      <section id="how-it-works" class="widescreen:section-min-height tallscreen:section-min-height scroll-mt-[68px] p-6 text-white">
+        <h2 class="text-center text-3xl font-bold text-white md:text-4xl mx-auto">
+          How It Works: 
+        </h2>
+        <p class="text-[#C7F177] mx-auto text-center mt-2">Ride Smarter, Not Harder</p>
+
+        <div class="flex flex-col md:flex-row gap-4 my-[45px] md:my-[100px] p-2 justify-center items-center">
+
+          <div class="flex flex-col gap-2 md:gap-8 p-2 md:p-8 self-stretch group hover:bg-[#C7F177] hover:text-[#010b13] rounded-xl border border-solid border-[#C7F177]">
+            <div class="w-10 h-10 flex justify-center items-center rounded-full self-center group-hover:bg-[#010B13]">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#C7F177">
+                <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-84 31.5-156.5T197-763l56 56q-44 44-68.5 102T160-480q0 134 93 227t227 93q134 0 227-93t93-227q0-67-24.5-125T707-707l56-56q54 54 85.5 126.5T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-40-360v-440h80v440h-80Z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold">Step 1: Power On the Bike</h3>
+              <p class="text-justify mt-2 hidden md:block">Press the power button to instantly activate the bike. The display shows your battery life and settings, ready for your ride.</p>
+            </div>
+          </div>
+
+          <div class="flex justify-center md:rotate-90 rotate-180">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c7f177"><path d="M479.92-80q-47.25 0-80.25-33.08t-33-80.33q0-47.26 33.08-80.26 33.07-33 80.33-33 47.25 0 80.25 33.08t33 80.34q0 47.25-33.08 80.25-33.07 33-80.33 33Zm-33.25-326.67v-345L336-642l-46.67-46.67L480-879.33l190.67 190.66L623-642 513.33-751.67v345h-66.66Z"/></svg>
+          </div>
+
+          <div class="flex flex-col gap-2 md:gap-8 p-2 md:p-8 self-stretch group hover:bg-[#C7F177] hover:text-[#010b13] rounded-xl border border-solid border-[#C7F177]">
+            <div class="w-10 h-10 flex justify-center items-center rounded-full self-center group-hover:bg-[#010B13]">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#C7F177">
+                <path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold">Step 2: Choose Your Assistance Level</h3>
+              <p class="text-justify mt-2 hidden md:block">Select between eco, normal, or sport modes to match your preferred level of pedal assist. Easily adjust as you ride.</p>
+            </div>
+          </div>
+
+          <div class="flex justify-center md:rotate-90 rotate-180">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c7f177"><path d="M479.92-80q-47.25 0-80.25-33.08t-33-80.33q0-47.26 33.08-80.26 33.07-33 80.33-33 47.25 0 80.25 33.08t33 80.34q0 47.25-33.08 80.25-33.07 33-80.33 33Zm-33.25-326.67v-345L336-642l-46.67-46.67L480-879.33l190.67 190.66L623-642 513.33-751.67v345h-66.66Z"/></svg>
+          </div>
+
+          <div class="flex flex-col gap-2 md:gap-8 p-2 md:p-8 self-stretch group hover:bg-[#C7F177] hover:text-[#010b13]  rounded-xl border border-solid border-[#C7F177]">
+            <div class="w-10 h-10 flex justify-center items-center rounded-full self-center group-hover:bg-[#010B13]">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#C7F177">
+                <path d="M200-160q-85 0-142.5-57.5T0-360q0-85 58.5-142.5T200-560q77 0 129.5 46T396-400h26l-72-200h-70v-80h200v80h-44l14 40h192l-58-160H480v-80h104q26 0 46.5 14t29.5 38l68 186h32q83 0 141.5 58.5T960-362q0 84-58 143t-142 59q-72 0-126.5-45T564-320H396q-14 69-68 114.5T200-160Zm0-80q41 0 70.5-22.5T312-320H200v-80h112q-12-36-41.5-58T200-480q-51 0-85.5 34.5T80-360q0 50 34.5 85t85.5 35Zm308-160h56q5-23 13.5-43t22.5-37H478l30 80Zm252 160q51 0 85.5-35t34.5-85q0-51-34.5-85.5T760-480h-4l40 106-76 28-38-106q-20 17-31 40t-11 52q0 50 34.5 85t85.5 35ZM196-360Zm564 0Z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold">Step 3: Start Riding</h3>
+              <p class="text-justify mt-2 hidden md:block">Pedal, and the motor engages smoothly to help you tackle hills or cruise longer distances with less effort.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- This is product section -->
+
+      <section id="products" class="widescreen:section-min-height tallscreen:section-min-height scroll-mt-[68px] p-6 text-white">
+        <h2 class="text-[#C7F177] text-center text-3xl font-bold md:text-4xl mx-auto">
+          Our Electric Bicycles
+        </h2>
+        <p class="text-white mx-auto text-center mt-2">Where Innovation Meets Performance</p>
+
+        <div class="flex flex-col items-center gap-2 justify-center sm:flex-row sm:flex-wrap sm:items-stretch mt-8 mx-auto">
+          <div class="bg-[#7AB37C] w-[300px] flex flex-col gap-4 p-4 rounded-2xl text-black">
+            <img src="./img/foldable.png" class="w-[300px] h-[250px] object-fit hover:sm:-translate-y-20 transition-all duration-500">
+            <h3 class="text-2xl font-bold text-center mx-auto">Folding E-Bike</h3>
+            <p class="text-justify">Compact and Portable. Foldable frame, lightweight design, integrated battery. Up to 50 km on a single charge.</p>
+            <div class="flex flex-row gap-4 justify-evenly p-2 items-center">
+              <p class="font-bold">$999</p>
+              <button class="bg-black rounded text-white p-2 hover:bg-[#BE8508] hover:text-black hover:px-4 transition-all duration-500">Buy Now</button>
+            </div>
+          </div>
+
+          <div class="bg-[#7AB37C] w-[300px] flex flex-col gap-4 p-4 rounded-2xl text-black">
+            <img src="./img/urban.png" class="w-[300px] h-[250px] object-cover hover:sm:-translate-y-20 transition-all duration-500">
+            <h3 class="text-2xl font-bold text-center mx-auto">City Cruise E-Bike</h3>
+            <p class="text-justify">The Ultimate City Ride. Built-in LED display, pedal assist, rear rack for cargo. Up to 60 km on a single charge.</p>
+            <div class="flex flex-row gap-4 justify-evenly p-2 items-center">
+              <p class="font-bold">$1299</p>
+              <button class="bg-black rounded text-white p-2 hover:bg-[#650908] hover:px-4 transition-all duration-500">Buy Now</button>
+            </div>
+          </div>
+
+          <div class="bg-[#7AB37C] w-[300px] flex flex-col gap-4 p-4 rounded-2xl text-black">
+            <img src="./img/adventure.png" class="w-[300px] h-[250px] object-contain hover:sm:-translate-y-20 transition-all duration-500">
+            <h3 class="text-2xl font-bold text-center mx-auto">TrailBlazer E-Bike</h3>
+            <p class="text-justify">Conquer Any Terrain. Full suspension, hydraulic disc brakes, durable frame. Up to 80 km on a single charge.</p>
+            <div class="flex flex-row gap-4 justify-evenly p-2 items-center">
+              <p class="font-bold">$1799</p>
+              <button class="bg-black rounded text-white p-2 hover:bg-[#2D2D2D] hover:px-4 transition-all duration-500">Buy Now</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- This is Testimonial section -->
+
+      <section id="testimonials" class="widescreen:section-min-height tallscreen:section-min-height scroll-mt-[68px] p-6 text-white">
+        <h2 class="text-[#C7F177] text-center text-3xl font-bold md:text-4xl mx-auto">
+          What Our Riders Are Saying
+        </h2>
+
+        <div class="mt-12 max-w-5xl mx-auto flex flex-row px-2 gap-4 overflow-scroll" id="testi">
+
+          <div class="bg-[#A7651D] w-[300px] flex flex-col p-4 rounded-2xl shrink-0 border border-solid border-white">
+            <p class="text-8xl font-serif">
+              &#8220;
+            </p>        
+            <p class="text-black">The TrailBlazer E-Bike is the real deal. The power and performance is good. I love how it handles those steep hills effortlessly. Who needs a car when you can ride in style and go green at the same time?</p>
+            <p class="text-right mt-4 text-white">&#8212;Tony Stark</p>
+            <p class="text-8xl font-serif text-right">
+              &#8221;
+            </p>
+          </div>
+
+          <div class="bg-black w-[300px] flex flex-col p-4 rounded-2xl shrink-0 border border-solid border-white">
+            <p class="text-8xl font-serif text-[#444]">
+              &#8220;
+            </p>        
+            <p>I’ve tried many high-tech vehicles, but the CityCruise E-Bike stands out for urban travel. Its sleek design allows for fast, silent commutes through Gotham's busy streets, and I appreciate its eco-friendliness. It’s a practical choice for any vigilante on the move.</p>
+            <p class="text-right mt-4 text-white">&#8212;Bruce Wayne</p>
+            <p class="text-8xl font-serif text-right text-[#444]">
+              &#8221;
+            </p>
+          </div>
+
+          <div class="bg-[#B03C2E] w-[300px] flex flex-col p-4 rounded-2xl shrink-0 border border-solid border-white">
+            <p class="text-8xl font-serif text-black">
+              &#8220;
+            </p>        
+            <p>With great power comes great responsibility, and the TrailBlazer E-Bike lives up to both. It's fast, responsive, and perfect for zipping through the city. Now I can save the day without breaking a sweat!</p>
+            <p class="text-right mt-4 text-white">&#8212;Peter Parker</p>
+            <p class="text-8xl font-serif text-right text-black">
+              &#8221;
+            </p>
+          </div>
+
+          <div class="bg-[#CB973B] w-[300px] flex flex-col p-4 rounded-2xl shrink-0 border border-solid border-white">
+            <p class="text-8xl font-serif">
+              &#8220;
+            </p>        
+            <p class="text-black">The CityCruise E-Bike has the perfect balance of grace and power. Whether I'm racing through Themyscira or blending in with the modern world, this bike helps me travel swiftly, silently, and in style.</p>
+            <p class="text-right mt-4 text-white">&#8212;Prince Diana</p>
+            <p class="text-8xl font-serif text-right">
+              &#8221;
+            </p>
+          </div>
+          
+          <div class="bg-[#292929] w-[300px] flex flex-col p-4 rounded-2xl shrink-0 border border-solid border-white">
+            <p class="text-8xl font-serif text-black">
+              &#8220;
+            </p>        
+            <p>The folding e-bike is the perfect addition to my gear. Whether I’m chasing bad guys or blending into the crowd, it's compact and quick to deploy. Plus, it’s great for staying undercover while traveling through the city. Highly recommend for stealthy missions.</p>
+            <p class="text-right mt-4 text-white">&#8212;Natasha Romanoff</p>
+            <p class="text-8xl font-serif text-right text-black">
+              &#8221;
+            </p>
+          </div>
+
+          <div class="bg-[#0099f7] w-[300px] flex flex-col p-4 rounded-2xl shrink-0 border border-solid border-white">
+            <p class="text-8xl font-serif text-black">
+              &#8220;
+            </p>        
+            <p>Even though I can fly faster than a speeding bullet, sometimes I prefer the simplicity of the CityCruise E-Bike. It's fast, reliable, and a great way to blend in with the citizens of Metropolis. Plus, Lois loves it!</p>
+            <p class="text-right mt-4 text-white">&#8212;Clark Kent</p>
+            <p class="text-8xl font-serif text-right text-black">
+              &#8221;
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- This is gallery section -->
+
+      <section id="gallery" class="widescreen:section-min-height tallscreen:section-min-height scroll-mt-[68px] p-6">
+       
+        <h2 class="text-[#C7F177] text-center text-3xl font-bold md:text-4xl mx-auto">
+          Explore Our E-Bikes in Action
+        </h2>
+
+        <div class="flex justify-center items-center">
+          <div class="w-[80%] h-[600px] m-auto mt-4 mb-4 relative overflow-hidden bg-green-300">
+            <button class="w-[30px] h-[30px] text-xl text-[#ffffff9f] bg-[#00000088] border-none absolute top-1/2 -translate-y-1/2 cursor-pointer z-[2] hover:text-[#fff] hover:bg-[#000000be] focus-within:text-[#fff] focus-within:bg-[#000000be] left-0" id="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <div class="flex h-[600px] transition-all duration-500 ease-in-out" id="carousal-container">
+              <img src="./img/1.jpeg" class="w-full h-full block object-cover object-center">
+              <img src="./img/2.jpg" class="w-full h-full block object-cover object-center">
+              <img src="./img/3.jpg" class="w-full h-full block object-cover object-center">
+              <img src="./img/4.jpg" class="w-full h-full block object-cover object-center">
+              <img src="./img/1.jpeg" class="w-full h-full block object-cover object-center">
+              <img src="./img/6.jpeg" class="w-full h-full block object-cover object-center">
+            </div>
+            <button class="w-[30px] h-[30px] text-xl text-[#ffffff9f] bg-[#00000088] border-none absolute top-[50%] -translate-y-1/2 cursor-pointer z-[2] hover:text-[#fff] hover:bg-[#000000be] focus-within:text-[#fff] focus-within:bg-[#000000be] right-0" id="next" onclick="changeSlide(1)">&#10095;</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- This is contact section -->
+
+      <section id="contact" class="widescreen:section-min-height tallscreen:section-min-height scroll-mt-[68px] p-6 text-white">
+        <h2 class="text-white text-center text-3xl font-bold md:text-4xl mx-auto">
+          Contact Us
+        </h2>
+
+        <div class="flex flex-col justify-center mt-10">
+          <label for="name" class="block text-xl mb-2">Name</label>
+          <input type="text" id="name" placeholder="Enter Your Name" class="text-xl p-2 rounded mb-2">
+
+          <label for="mail" class="block text-xl mb-2 mt-2">Mail</label>
+          <input type="email" id="mail" placeholder="Enter Your E-Mail" class="text-xl p-2 rounded mb-2">
+
+          <label for="message" class="block text-xl mb-2 mt-2">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Type Your Message Here..." class="text-xl p-2 rounded mb-2"></textarea>
+
+          <button class="w-[150px] p-4 text-black text-xl bg-[#C7F177] mt-2 hover:bg-[#2f3d14] hover:text-white rounded">Submit</button>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- This is footer section -->
+
+    <footer id="footer" class="bg-[#C7F177] text-xl text-black">
+      <section
+        class="mx-auto flex max-w-4xl flex-col gap-4 p-4 sm:flex-row sm:justify-between"
+      >
+        <address>
+          <h2>E-Cycle Company</h2>
+          123 E-Cylce Street<br />
+          Green City, EcoLand<br />
+          Email:
+          <a href="mailto:info@ecylcecompany.com">info@ecylcecompany.com</a
+          ><br />
+          Phone: <a href="tel:+15555555555">+1 (555) 123-4567</a>
+        </address>
+        <nav class="hidden flex-col gap-2 md:flex" aria-label="footer">
+          <a href="#products" class="hover:opacity-90">Products</a>
+          <a href="#testimonials" class="hover:opacity-90">Testimonials</a>
+          <a href="#contact" class="hover:opacity-90">Contact Us</a>
+        </nav>
+        <div class="flex flex-col sm:gap-2">
+          <p class="text-right">Copyrigt &copy; <span id="year"></span></p>
+          <p class="text-right">All Rights Reserved</p>
+        </div>
+      </section>
+    </footer>
+</body>
+</html>
